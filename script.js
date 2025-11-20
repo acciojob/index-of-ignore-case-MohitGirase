@@ -1,5 +1,17 @@
 function indexOfIgnoreCase(s1, s2) {
   // write your code here
+	s1 = s1.toLowerCase();
+	s2 = s2.toLowerCase();
+	
+	let n = s1.length;
+	let m = s2.length;
+	for(let i=0; i<=n-m; i++){
+		if(s1.substring(i, i+m) === s2){
+			return i;
+		}
+	}
+	
+	return -1;
 }
 
 // Please do not change the code below
